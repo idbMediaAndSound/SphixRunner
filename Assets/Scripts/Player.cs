@@ -40,6 +40,10 @@ public class Player : MonoBehaviour
             CheckForPlayerPosition();
             maxDistance += Time.deltaTime * 3f;
         }
+
+        float horizontalmovement = Input.GetAxis("Horizontal");
+        transform.position += Vector3.right * horizontalmovement* Time.deltaTime;
+
     }
 
     private void CheckForPlayerPosition()
